@@ -154,4 +154,4 @@ Network: Sepolia Testnet
 
 Contract Address: 0x4C657F2980BceBF5A8270435633fc8938E8814aC
 
-GitHub Repository: 
+GitHub Repository: https://github.com/rikygiordano-a11y/muove-city-nft.git
