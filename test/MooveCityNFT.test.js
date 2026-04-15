@@ -51,9 +51,12 @@ describe("MooveCityNFT", function () {
   });
 
   it("should update base URI", async function () {
-    await contract.setBaseURI("https://newbase.com/");
-    expect(await contract.getCurrentSupply()).to.equal(0n);
-  });
+  await contract.setBaseURI("https://newbase.com/");
+
+  await expect(
+    contract.tokenURI(0)
+  ).to.be.reverted;
+});
 
   it("should revert withdraw when contract has no balance", async function () {
     await expect(contract.withdraw()).to.be.revertedWith("No funds available");
